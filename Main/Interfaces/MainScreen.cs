@@ -6,9 +6,6 @@ namespace DungeonCrawlers.Main.Interfaces
 {
     internal class MainScreen
 	{
-
-
-
 		private string gameVersion = "Test Version V.1 \n";
 
 		public ConsoleKeyInfo ConsoleKeyInfo { get; private set; }

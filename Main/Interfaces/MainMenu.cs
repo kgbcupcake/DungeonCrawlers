@@ -8,10 +8,6 @@ namespace DungeonCrawlers.Main.Interfaces
 {
 	internal class MainMenu
 	{
-
-
-
-
 		public static void Mainmenu()
 		{
 			Menu();
@@ -29,17 +25,15 @@ namespace DungeonCrawlers.Main.Interfaces
 				{
 					//Start Game
 					case "S":
-						WriteLine("Loading Game Enjoy...");
-						GameEngine.StartGame();
-
+						Clear();
+						WriteLine("Loading Game Plz Wait...");
+						Thread.Sleep(2500);
+						StartGame();
 						break;
 
 					// Load Game
 					case "L":
-
 						break;
-
-
 					//Credits
 					case "C":
 						Clear();
@@ -47,20 +41,33 @@ namespace DungeonCrawlers.Main.Interfaces
 						Thread.Sleep(1500);
 						Clear();
 						CreditService.loadCredits();
-
 						break;
-
 					default:
 						Clear();
-						WriteLine("Plz Enter The Right Letter ");
+						WriteLine("Plz Enter The Right Letter".Pastel("#72071C"));
 						Mainmenu();
 						break;
 				}
 			}
+
+			
+
+
+
 		}
 
+		private static void StartGame()
+		{
+			GameEngine.StartGame();
+			//Will go into CreateCharacter Menu..
+		
 
+		}
 
+		private static void CreateCharacter()
+		{
+			GameEngine.CreateCharacter();
+		}
 
 
 

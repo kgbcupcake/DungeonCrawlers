@@ -13,6 +13,20 @@ namespace DungeonCrawlers.Utilities.Functions
 			ReadKey(true);
 		}
 
+		//LineBreak
+
+		public static void LineBreak()
+		{
+
+			WriteLine();
+			WriteLine();
+			WriteLine();
+
+		}
+		
+
+
+
 		public static void ConsoleSize()
 		{
 			
