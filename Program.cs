@@ -12,7 +12,7 @@ namespace DungeonCrawler
 
 		private static void Main(string[] args)
 		{
-
+			
 			MainFunctions.ConsoleSize();
 
 			//Login Screen

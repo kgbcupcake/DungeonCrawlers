@@ -15,14 +15,14 @@ namespace DungeonCrawlers.Main.Interfaces
 
 		public void mainScreen()
 		{
-			string title = "====CupCake-s Adventure====";
+			string title = "====DungeonCrawlers====";
 
 			Title = title;
 			ForegroundColor = ConsoleColor.Red;
 			GameTitle gTitle = new GameTitle();
 			gTitle.MainGameTitle();
 			WriteOnBottomLine(gameVersion.Pastel("#5A057A"));
-			Write(String.Format("{0," + Console.WindowWidth / 2 + "}","Plz Enter Your Name:".Pastel("#97151D")));
+			Write(String.Format("{0," + Console.WindowWidth /2 + "}","Plz Enter Your Name:".Pastel("#97151D")));
 			//Write("Plz Enter Your Name:");
 			ForegroundColor = ConsoleColor.Cyan;
 			string? UserName = ReadLine();

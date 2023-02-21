@@ -1,20 +1,21 @@
                                                               DungeonCrawlers
  
 ## Description:
-#### this is a complete rebuild of my Dungeon adventure.
+#### just a small Rpg game I'm building as i learn C Sharp...
 #### There is nothing special about this game, I do plan on adding to it down the road..... 
-#### At the moment the Game does not save the player's data it only loads from the Json Files located in the bin file folder i plan on changing this in the future ...
-#### This is just the framework 
+#### This is just the framework at the moment.
 
 =======
 ## Future Plan's:
-=======
 #### -Better User Gui.
-#### -Saving & loading system.
+#### -Saving & loading system.(Being implemented)
 #### -Store
-#### -Player CLasses (Being Worked On)
+#### -Player CLasses
 #### -Combat System
-=======
+#### -Town Square
+#### -Player Inventory.
+#### -PLayer Pet (Maybe)
+=======s
 
 
 

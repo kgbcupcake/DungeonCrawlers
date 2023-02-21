@@ -11,8 +11,7 @@ namespace DungeonCrawlers.Game.GameEngine
         {
 			Thread.Sleep(200);
 			Clear();
-			string title = "====Dungeon Crawlers====";
-			Title = title .Pastel("#A80D0D");
+
 			ReadKey();
 
 		}

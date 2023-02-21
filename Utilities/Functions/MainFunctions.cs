@@ -15,9 +15,13 @@ namespace DungeonCrawlers.Utilities.Functions
 
 		public static void ConsoleSize()
 		{
+			
 			SetWindowSize(100, 25);
 			BufferHeight = 25;
 			BufferWidth = 100;
+
+
+
 		}
 
 

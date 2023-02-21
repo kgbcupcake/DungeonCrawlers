@@ -2,6 +2,8 @@
 using Pastel;
 using static System.Console;
 using DungeonCrawlers.Game.GameEngine;
+using DungeonCrawlers.Utilities.GameUtilites.Credits;
+
 namespace DungeonCrawlers.Main.Interfaces
 {
 	internal class MainMenu
@@ -27,6 +29,7 @@ namespace DungeonCrawlers.Main.Interfaces
 				{
 					//Start Game
 					case "S":
+						WriteLine("Loading Game Enjoy...");
 						GameEngine.StartGame();
 
 						break;
@@ -39,6 +42,11 @@ namespace DungeonCrawlers.Main.Interfaces
 
 					//Credits
 					case "C":
+						Clear();
+						WriteLine("Loading Credit's...");
+						Thread.Sleep(1500);
+						Clear();
+						CreditService.loadCredits();
 
 						break;
 
