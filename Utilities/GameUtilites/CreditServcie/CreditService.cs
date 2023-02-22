@@ -1,11 +1,11 @@
-﻿using DungeonCrawlers.Main.Interfaces;
+﻿using DungeonCrawlers.Game.Interfaces;
 using DungeonCrawlers.Utilities.Functions;
 using Newtonsoft.Json;
 using Pastel;
 using static System.Console;
 namespace DungeonCrawlers.Utilities.GameUtilites.Credits
 {
-	internal class CreditService
+    internal class CreditService
 	{
 
 

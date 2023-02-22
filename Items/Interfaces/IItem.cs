@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DungeonCrawlers.Adventures.AdventureService
+namespace DungeonCrawlers.Items.Interfaces
 {
-	internal class AdventureServices
+	public interface IItem
 	{
 	}
 }

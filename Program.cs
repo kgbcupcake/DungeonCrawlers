@@ -1,7 +1,4 @@
-﻿
-using DungeonCrawlers.Main.Interfaces;
-using static System.Console;
-using Pastel;
+﻿using DungeonCrawlers.Game.Interfaces;
 using DungeonCrawlers.Utilities.Functions;
 
 namespace DungeonCrawler
@@ -12,7 +9,8 @@ namespace DungeonCrawler
 
 		private static void Main(string[] args)
 		{
-			
+
+
 			MainFunctions.ConsoleSize();
 
 			//Login Screen

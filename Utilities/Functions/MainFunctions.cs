@@ -23,8 +23,32 @@ namespace DungeonCrawlers.Utilities.Functions
 			WriteLine();
 
 		}
-		
 
+
+		//Yes/No Option's
+		public static void YesNo()
+		{
+			Clear();
+			WriteLine("Are you sure you don't want the torch? You wont be able to see a thing!!");
+			Write("Yes/No?");
+			switch (ReadLine().ToUpper())
+			{
+
+				case "YES":
+					Clear();
+					WriteLine("you're a animal!!! Okay");
+					break;
+				case "NO":
+					Clear();
+					WriteLine("You have successfully taken the torch off of the wall");
+					break;
+				default:
+
+					WriteLine("Plz Put Yes Or No");
+
+					break;
+			}
+		}
 
 
 		public static void ConsoleSize()
