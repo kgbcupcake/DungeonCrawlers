@@ -20,16 +20,16 @@
 #### -Pet's (Maybe)
 =======
 #### Extra Info about the source code..
-## So i have OCD you might be able to tell with the folder's lol..
-## Ever folder and class has a purpose..
+#### So i have OCD you might be able to tell with the folder's lol..
+#### Ever folder and class has a purpose..
 
 
 
 # ChangeLog:
-#### 2/20/2023
-## Added Credits Class for links to my YouTube, Discord and, My GitHub.
+## 2/20/2023
+#### Added Credits Class for links to my YouTube, Discord and, My GitHub.
 
-#### 2/22/2023
-## Added first adventure, also added first player class
-## Moved some files around and made folders.
-## You can now load and create New Player's And Adventure's While Json File's
+## 2/22/2023
+#### Added first adventure, also added first player class
+#### Moved some files around and made folders.
+#### You can now load and create New Player's And Adventure's While Json File's
