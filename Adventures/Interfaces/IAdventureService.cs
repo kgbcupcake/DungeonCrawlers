@@ -2,8 +2,8 @@
 
 namespace DungeonCrawlers.Adventures.Interfaces
 {
-    public interface IAdventureService
+	public interface IAdventureService
 	{
-        AdventureData GetLoadDukesquest();
+		AdventureData GetLoadDukesquest();
 	}
 }

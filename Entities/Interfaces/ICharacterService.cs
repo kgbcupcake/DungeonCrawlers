@@ -2,8 +2,8 @@
 
 namespace DungeonCrawlers.Entities.Interfaces
 {
-    public interface ICharacterService
-    {
-        public CharacterData GetLoadWarriorClass();
-    }
+	public interface ICharacterService
+	{
+		public CharacterData GetLoadWarriorClass();
+	}
 }

@@ -1,25 +1,27 @@
 ﻿using DungeonCrawlers.Game.Interfaces;
+using static System.Console;
 
 namespace DungeonCrawlers.Game.GameEngine
 {
-	public class Engine
-    {
-		
-		private static QuestMenu  Questmenu = new QuestMenu();
-		private static CharacterCreationMenu CCm= new CharacterCreationMenu();
+	internal class Engine
+	{
+		private static QuestMenu Questmenu = new QuestMenu();
+		private static CharacterCreationMenu CCm = new CharacterCreationMenu();
+
 		public void StartGame()
 		{
-			CCm.CreationMenu();
-			
-
-			//Will go into CreateCharacter Menu.. first then load quest menu..
-			//Still have to build CharacterCreationMenu...
-			//CharacterCreationMenu CCm = new CharacterCreationMenu();
-			//CCm.CreationMenu();
-
-
-			Questmenu.Questmenu();
-
+			try
+			{
+				CCm.CreationMenu();
+				Questmenu.Questmenu();
+			}
+			catch (Exception e)
+			{
+				string? ErrorMsg = "Initial Files not Found";
+				Clear();
+				WriteLine($"KaBoom Orcs did it again something went wrong!!! {ErrorMsg}");
+				ReadKey();
+			}
 		}
 	}
 }

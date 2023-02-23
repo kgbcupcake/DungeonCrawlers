@@ -2,15 +2,16 @@
 using DungeonCrawlers.Adventures.Services;
 using Pastel;
 using static System.Console;
+
 namespace DungeonCrawlers.Game.Interfaces
 {
-    internal class QuestMenu
+	internal class QuestMenu
 	{
 		private static AdventureService adventureService = new AdventureService();
 		private static DukesQuest LoadDukesQuest = new DukesQuest(adventureService);
-			public void Questmenu()
-		{
 
+		public void Questmenu()
+		{
 			ResetColor();
 			WriteLine("Plz Select Which Quest You Would Like To Begin With\n");
 			WriteLine("=================================================================================".Pastel("#125874"));
@@ -37,28 +38,6 @@ namespace DungeonCrawlers.Game.Interfaces
 					Questmenu();
 					break;
 			}
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	}
 }

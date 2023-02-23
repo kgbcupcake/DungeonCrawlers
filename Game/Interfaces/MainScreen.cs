@@ -2,49 +2,35 @@
 using Pastel;
 using static DungeonCrawlers.Utilities.Functions.MainFunctions;
 using static System.Console;
+
 namespace DungeonCrawlers.Game.Interfaces
 {
-    internal class MainScreen
-    {
-        private string gameVersion = "Test Version V.1 \n";
+	internal class MainScreen
+	{
+		private string gameVersion = "Test Version V.1 \n";
 
-        public ConsoleKeyInfo ConsoleKeyInfo { get; private set; }
+		public ConsoleKeyInfo ConsoleKeyInfo { get; private set; }
 
-        public void mainScreen()
-        {
-            string title = "====DungeonCrawlers====";
+		public void mainScreen()
+		{
+			string title = "====DungeonCrawlers====";
 
-            Title = title;
-            ForegroundColor = ConsoleColor.Red;
-            GameTitle gTitle = new GameTitle();
-            gTitle.MainGameTitle();
-            WriteOnBottomLine(gameVersion.Pastel("#5A057A"));
-            Write(string.Format("{0," + WindowWidth / 2 + "}", "Plz Enter Your Name:".Pastel("#97151D")));
-            //Write("Plz Enter Your Name:");
-            ForegroundColor = ConsoleColor.Cyan;
-            string? UserName = ReadLine();
-            Clear();
-            WriteLine($"Welcome {UserName}\n");
-            Write("                       Press Enter TO Enter Dungeon: ".Pastel("#8A39A8"));
-            ConsoleKeyInfo key = ReadKey();
-            Thread.Sleep(500);
-            Clear();
-            MainMenu.Mainmenu();
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
+			Title = title;
+			ForegroundColor = ConsoleColor.Red;
+			GameTitle gTitle = new GameTitle();
+			gTitle.MainGameTitle();
+			WriteOnBottomLine(gameVersion.Pastel("#5A057A"));
+			Write(string.Format("{0," + WindowWidth / 2 + "}", "Plz Enter Your Name:".Pastel("#97151D")));
+			//Write("Plz Enter Your Name:");
+			ForegroundColor = ConsoleColor.Cyan;
+			string? UserName = ReadLine();
+			Clear();
+			WriteLine($"Welcome {UserName}\n");
+			Write("                       Press Enter TO Enter Dungeon: ".Pastel("#8A39A8"));
+			ConsoleKeyInfo key = ReadKey();
+			Thread.Sleep(500);
+			Clear();
+			MainMenu.Mainmenu();
+		}
+	}
 }

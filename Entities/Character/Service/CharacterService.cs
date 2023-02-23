@@ -3,10 +3,10 @@ using Newtonsoft.Json;
 
 namespace DungeonCrawlers.Entities.Character.Service
 {
-	public class CharacterService :ICharacterService
-    {
-        public CharacterData GetLoadWarriorClass()
-        {
+	public class CharacterService : ICharacterService
+	{
+		public CharacterData GetLoadWarriorClass()
+		{
 			var basePath = $"{AppDomain.CurrentDomain.BaseDirectory}PlayerData";
 			var Warriorc = new CharacterData();
 
@@ -18,10 +18,12 @@ namespace DungeonCrawlers.Entities.Character.Service
 				using StreamReader fi = File.OpenText(WarriorJson[0].FullName);
 				Warriorc = JsonConvert.DeserializeObject<CharacterData>(fi.ReadToEnd());
 			}
+			else
+			{
+				throw new Exception("No Character found");
+			}
+
 			return Warriorc;
-
-
 		}
-
-    }
+	}
 }

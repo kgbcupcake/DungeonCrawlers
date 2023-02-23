@@ -1,5 +1,6 @@
 ﻿using Pastel;
 using static System.Console;
+
 namespace DungeonCrawlers.Utilities.Functions
 {
 	public class MainFunctions
@@ -17,13 +18,10 @@ namespace DungeonCrawlers.Utilities.Functions
 
 		public static void LineBreak()
 		{
-
 			WriteLine();
 			WriteLine();
 			WriteLine();
-
 		}
-
 
 		//Yes/No Option's
 		public static void YesNo()
@@ -33,15 +31,16 @@ namespace DungeonCrawlers.Utilities.Functions
 			Write("Yes/No?");
 			switch (ReadLine().ToUpper())
 			{
-
 				case "YES":
 					Clear();
 					WriteLine("you're a animal!!! Okay");
 					break;
+
 				case "NO":
 					Clear();
 					WriteLine("You have successfully taken the torch off of the wall");
 					break;
+
 				default:
 
 					WriteLine("Plz Put Yes Or No");
@@ -50,20 +49,12 @@ namespace DungeonCrawlers.Utilities.Functions
 			}
 		}
 
-
 		public static void ConsoleSize()
 		{
-			
 			SetWindowSize(100, 25);
 			BufferHeight = 25;
 			BufferWidth = 100;
-
-
-
 		}
-
-
-
 
 		public static void WriteOnBottomLine(string Hello)
 		{

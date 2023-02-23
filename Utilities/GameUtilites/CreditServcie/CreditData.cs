@@ -13,8 +13,5 @@
 		public string? LinkG { get; set; }
 		public string? LinkY { get; set; }
 		public string? LinkD { get; set; }
-	
-
-
 	}
 }

@@ -5,12 +5,8 @@ namespace DungeonCrawler
 {
 	internal class Program
 	{
-
-
 		private static void Main(string[] args)
 		{
-
-
 			MainFunctions.ConsoleSize();
 
 			//Login Screen
@@ -23,20 +19,5 @@ namespace DungeonCrawler
 			MainScreen screen = new MainScreen();
 			screen.mainScreen();
 		}
-
-
-
-
-
-
-
 	}
-
-
-
-
-
-
-
-
 }
