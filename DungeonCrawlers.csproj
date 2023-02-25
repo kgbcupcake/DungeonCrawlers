@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Entities\Encounters\CumstomEncounters\" />
     <Folder Include="Entities\Monsters\" />
   </ItemGroup>
 

@@ -1,4 +1,6 @@
-﻿using DungeonCrawlers.Entities.Interfaces;
+﻿using DungeonCrawlers.Adventures.Services;
+using DungeonCrawlers.Entities.Character.Service;
+using DungeonCrawlers.Entities.Interfaces;
 using Pastel;
 using static System.Console;
 
@@ -12,24 +14,27 @@ namespace DungeonCrawlers.Entities.Character.Warrior
 		{
 			characterService = CharacterService;
 		}
-
-		public const string V = "                       Press Enter To Continue : ";
-
+	public const string V = "                       Press Enter To Continue : ";
+		public static  CharacterData currentPlayer = new CharacterData();
 		public void LoadWarrior()
 		{
+			
 			var Warriorc = characterService.GetLoadWarriorClass();
 
-			WriteLine($"You Have Chosen the  {Warriorc.ClassName} class \n");
+
+		
+
+			WriteLine($"You Have Chosen the  {Warriorc.player} class \n");
 			Thread.Sleep(2000);
 			Clear();
-			string? Wc = Warriorc.ClassName.Pastel("#148794");
+			string? Wc = Warriorc.player.Pastel("#148794");
 			WriteLine(Wc + " Stat's".Pastel("#A0276D"));
 			Playerstats();
-			WriteLine($"Create a name for your {Warriorc.ClassName}");
-			string? PlayerName = ReadLine().Pastel("#154897");
+			WriteLine($"Create a name for your {Warriorc.player}");
+			string? CharacterData = ReadLine().Pastel("#154897");
 			//Thread.Sleep(100);
 			Clear();
-			WriteLine($"Your Character name is {PlayerName} the {Warriorc.ClassName}");
+			WriteLine($"Your Character name is {CharacterData} the {Warriorc.player}");
 			Write(V.Pastel("#8A39A8"));
 			ConsoleKeyInfo key = ReadKey();
 			Clear();
@@ -43,7 +48,9 @@ namespace DungeonCrawlers.Entities.Character.Warrior
 			//ForegroundColor = ConsoleColor.DarkMagenta;
 			WriteLine($"Gold: " + Warriorc.coins);
 			ResetColor();
-			WriteLine($"Level: {Warriorc.Level}\n");
+			WriteLine($"Level: {Warriorc.Level}");
+			WriteLine($"Class:{Warriorc.Class}");
+			
 		}
 	}
 }

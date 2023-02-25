@@ -1,4 +1,6 @@
-﻿using DungeonCrawlers.Game.GameEngine;
+﻿using DungeonCrawlers.Adventures.Services;
+using DungeonCrawlers.Entities.Character.Service;
+using DungeonCrawlers.Game.GameEngine;
 using DungeonCrawlers.Utilities.GameUtilites;
 using DungeonCrawlers.Utilities.GameUtilites.Credits;
 using Pastel;
@@ -8,14 +10,16 @@ namespace DungeonCrawlers.Game.Interfaces
 {
 	internal class MainMenu
 	{
-		private static Engine gameEngine = new Engine();
+		private static AdventureService adventureService = new AdventureService();
+		private static CharacterService characterService = new CharacterService();
+		//private static Engine gameEngine = new Engine(adventureService,characterService);
 
 		public static void Mainmenu()
 		{
 			Menu();
 			static void Menu()
 			{
-				GameTitle gTitle = new GameTitle();
+				GameArt gTitle = new GameArt();
 				gTitle.MainGameTitle();
 
 				WriteLine("		      ==============================================".Pastel("#125874"));
@@ -32,7 +36,7 @@ namespace DungeonCrawlers.Game.Interfaces
 						Thread.Sleep(2500);
 						Clear();
 
-						gameEngine.StartGame();
+						Engine.StartGame();
 						break;
 
 					// Load Game

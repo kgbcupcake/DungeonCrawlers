@@ -3,7 +3,6 @@
 	public class AdventureData
 	{
 		public string? Title { get; set; }
-		public string? descriptionD { get; set; }
 
 		public string? DescriptionD { get; set; }
 
