@@ -1,5 +1,7 @@
-﻿using DungeonCrawlers.Adventures.Interfaces;
+﻿using CupCakesAdventure;
+using DungeonCrawlers.Adventures.Interfaces;
 using DungeonCrawlers.Entities.Character.Service;
+using DungeonCrawlers.Entities.Encounters;
 using DungeonCrawlers.Game.Interfaces;
 using DungeonCrawlers.Utilities.Functions;
 using DungeonCrawlers.Utilities.GameUtilites;
@@ -15,7 +17,6 @@ namespace DungeonCrawlers.Adventures.Quests
 		private static QuestMenu Questmenu = new QuestMenu();
 		private static CharacterService characterService = new CharacterService();
 		public static readonly Player currentPlayer = new Player();
-
 		public DukesQuest(IAdventureService AdventureServices)
 		{
 			adventureServices = AdventureServices;
@@ -35,13 +36,12 @@ namespace DungeonCrawlers.Adventures.Quests
 		public  void DukesMainQuest()
 		{
 			var loadDukesquest = adventureServices.GetLoadDukesquest();	
-			var Warriorc = characterService.GetLoadWarriorClass();
+			//var Warriorc = characterService.GetLoadWarriorClass();
 
 			string? q1 = "Quest One:".Pastel("#82282E");
 			string? dec = "Description:".Pastel("#82282E");
 			WriteLine(q1 + " You Have Chosen ".Pastel("#154871") + loadDukesquest.Title.Pastel("#A02DA3"));
 			WriteLine(dec + loadDukesquest.DescriptionD.Pastel("#154875".ToUpper()));
-			WriteLine("Player Name: " + MainScreen.currentPlayer.player);
 			//Write("                       Press Enter TO Enter Continue  : ".Pastel("#8A39A8"));
 			//ConsoleKeyInfo key = ReadKey();
 			//Thread.Sleep(50000);
@@ -49,7 +49,7 @@ namespace DungeonCrawlers.Adventures.Quests
 			WriteLine();
 			Write("Yes/No: ");
 			MainFunctions.YesNoTwo();
-			WriteLine("As the  enter the Sewers you notice there is no lights...\njust torch's on the wall");
+			WriteLine("As you enter the Sewers you notice there is no lights...\njust torch's on the wall");
 			Write("Do you take a torch off the wall? Yes/No:");
 			switch (ReadLine().ToUpper())
 			{
@@ -75,14 +75,22 @@ namespace DungeonCrawlers.Adventures.Quests
 			}
 			Clear();
 			gameArt.DukesTitle();
-			WriteLine($"As{MainScreen.currentPlayer.player}  continue your way down into the Sewers you come across a pile of bones from a creature that" +
+			WriteLine("As continue your way down into the Sewers you come across a pile of bones from a creature that" +
 			"\n you have never seen before.. As you walk further into the Sewers you see this person just standing there... " +
 			" you Whistle to get attention He Turn's");
 			//Combat Scene.
+			Entities.Encounters.MainEncounter.FirstEncounter();
+
+
+			//Store
+			MainFunctions.Runstore();
+			WriteLine("Testing after running store");
 			ReadKey();
+			//WriteLine("Test After Running Store");
+			//ReadKey();
 			//TODO list
 			//Rooms
-			//Combat
+			
 
 
 		}

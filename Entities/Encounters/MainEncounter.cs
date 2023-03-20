@@ -1,5 +1,4 @@
-﻿using CupCakesAdventure;
-using DungeonCrawlers.Entities.Character.Service;
+﻿using DungeonCrawlers.Entities.Character.Service;
 using DungeonCrawlers.Game.Interfaces;
 using Pastel;
 using static DungeonCrawlers.Utilities.Functions.MainFunctions;
@@ -10,9 +9,17 @@ namespace DungeonCrawlers.Entities.Encounters
 	{
 		static readonly Random rand = new Random();
 		public static Player currentPlayer = new Player();
+		//private readonly IAdventureService adventureServices;
+			
+
+
 		public static void FirstEncounter()
 		{
+			
 
+			string? Hr = "Human Rouge";
+			WaitForAnyKeyPress();
+			Combat(false, Hr, 1, 4);
 
 
 		}
@@ -30,7 +37,7 @@ namespace DungeonCrawlers.Entities.Encounters
 			{
 
 				//w = GetWizard();
-				//n = GetName();
+				n = GetName();
 				//z = GetZombie();
 				p = MainScreen.currentPlayer.GetPower();
 				h = MainScreen.currentPlayer.GetHealth();
@@ -53,7 +60,7 @@ namespace DungeonCrawlers.Entities.Encounters
 				WriteLine(p + "/" + h);
 				WriteLine("====================".Pastel("#125874"));
 				WriteLine("| (A)ttack (D)enfend |");
-				WriteLine("|  (R)un    (H)eal |");
+				WriteLine("      |(H)eal|");
 				WriteLine("====================".Pastel("#125874"));
 				WriteLine(" Potions: " + MainScreen.currentPlayer.potion + "  Health: " + MainScreen.currentPlayer.health);
 				string? input = ReadLine();
@@ -85,27 +92,7 @@ namespace DungeonCrawlers.Entities.Encounters
 					MainScreen.currentPlayer.health -= damage;
 					h -= attack;
 				}
-				else if (input.ToLower() == "r" || input.ToLower() == "run")
-				{
-					//Run
-					if (rand.Next(0, 2) == 0)
-					{
-						WriteLine("As you sprint aways for the " + n + ", its strikes catches you in the back \n sending you sprawling to the ground");
-						int damage = p - MainScreen.currentPlayer.armorValue;
-						if (damage < 0)
-							damage = 0;
-						WriteLine("You lose" + damage + " health and are unable to escape");
-						WaitForAnyKeyPress();
-					}
-					else
-					{
-						WriteLine("You use your crazy ninja moves to evade " + n + " and you successfully escape!!");
-						WaitForAnyKeyPress();
-						//Go to store
-						Store.LoadShop(currentPlayer);
-
-					}
-				}
+			
 				else if (input.ToLower() == "h" || input.ToLower() == "heal")
 				{
 					//Heal
@@ -137,11 +124,8 @@ namespace DungeonCrawlers.Entities.Encounters
 				//Death Code
 				if (MainScreen.currentPlayer.health <= 0)
 				{
-					//Death code
 					Clear();
 					WriteLine("as the" + n + " stands tall and comes down to strikes. You have been Slayn by the mighty " + n);
-					//ReadKey();
-
 					Exit myExit = new Exit();
 					myExit.mainExit();
 				}
@@ -155,6 +139,33 @@ namespace DungeonCrawlers.Entities.Encounters
 			WaitForAnyKeyPress();
 			Clear();
 		}
+
+
+
+		public static string GetName()
+		{
+			switch (rand.Next(0, 4))
+			{
+				case 0:
+					return "Skeleton".Pastel("#125748");
+
+				case 1:
+					return "Zombie";
+
+				case 2:
+					return "Cultist";
+
+				case 3:
+					return "Grave Robber";
+
+
+
+			}
+			return "Human Rouge";
+
+
+		}
+
 
 
 

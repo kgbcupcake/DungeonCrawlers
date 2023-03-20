@@ -1,4 +1,6 @@
-﻿using DungeonCrawlers.Game.Interfaces;
+﻿using CupCakesAdventure;
+using DungeonCrawlers.Entities.Character.Service;
+using DungeonCrawlers.Game.Interfaces;
 using Pastel;
 using static System.Console;
 
@@ -7,14 +9,16 @@ namespace DungeonCrawlers.Utilities.Functions
 	public class MainFunctions
 	{
 		private static QuestMenu Questmenu = new QuestMenu();
+		public static readonly Player currentPlayer = new Player();
 		public static void WaitForAnyKeyPress()
 		{
 			Write("\nPress any key to continue....".Pastel("#210487"));
 			ReadKey(true);
 		}
 
-		//LineBreak
-
+		/// <summary>
+		/// LineBreak
+		/// </summary>
 		public static void LineBreak()
 		{
 			WriteLine();
@@ -22,7 +26,9 @@ namespace DungeonCrawlers.Utilities.Functions
 			WriteLine();
 		}
 
-		//Yes/No Option's
+		/// <summary>
+		/// Yes/No Option for Torch....
+		/// </summary>
 		public static void YesNo()
 		{
 			Clear();
@@ -48,7 +54,9 @@ namespace DungeonCrawlers.Utilities.Functions
 			}
 		}
 
-
+		/// <summary>
+		/// Yes No Option for Starting Quest
+		/// </summary>
 		public static void YesNoTwo()
 		{
 
@@ -111,5 +119,39 @@ namespace DungeonCrawlers.Utilities.Functions
 
 			WriteLine();
 		}
+
+		/// <summary>
+		/// This Method Loads the Store...
+		/// </summary>
+		public static void Runstore()
+
+		{
+
+			if (MainScreen.currentPlayer.health > 0)
+			{
+				string? Hr = "Human Rouge";
+				WriteLine($"You Have defeated {Hr} would you like to go to the store and upgrade your gear?");
+				Write("Yes/No:");
+				switch (ReadLine().ToUpper())
+				{
+					case "YES":
+						WriteLine("Loading Store");
+						Store.LoadShop(currentPlayer);
+						break;
+					case "NO":
+						break;
+				}
+
+			}
+
+
+
+		}
+
+
+
+
+
 	}
+
 }

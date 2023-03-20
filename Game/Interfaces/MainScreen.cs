@@ -27,6 +27,9 @@ namespace DungeonCrawlers.Game.Interfaces
 			//string? UserName = ReadLine();
 			Clear();
 			WriteLine($"Welcome {currentPlayer.player}\n");
+
+			WriteLine("Before we start Plz Choose which Character you would like to play as.");
+			WriteLine("Mage, Knight, Warrior, Archer  ");
 			Write("                       Press Enter TO Enter Dungeon: ".Pastel("#8A39A8"));
 			ConsoleKeyInfo key = ReadKey();
 			Thread.Sleep(500);

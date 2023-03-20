@@ -9,6 +9,9 @@ namespace CupCakesAdventure
 
 	public class Store
 	{
+		
+		public static Player currentPlayer = new Player();
+
 		static int armorMod;
 		static int weaponMod;
 		static int difMod;
