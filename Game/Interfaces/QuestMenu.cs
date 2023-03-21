@@ -1,8 +1,6 @@
-﻿using DungeonCrawlers.Adventures.Interfaces;
-using DungeonCrawlers.Adventures.Quests;
+﻿using DungeonCrawlers.Adventures.Quests;
 using DungeonCrawlers.Adventures.Services;
 using DungeonCrawlers.Entities.Character.Service;
-using DungeonCrawlers.Entities.Character.Warrior;
 using Pastel;
 using static System.Console;
 
@@ -19,6 +17,9 @@ namespace DungeonCrawlers.Game.Interfaces
 
 		public void Questmenu(AdventureData? adventureData = null)
 		{
+
+
+
 
 			
 			ResetColor();

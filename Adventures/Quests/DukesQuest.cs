@@ -75,7 +75,7 @@ namespace DungeonCrawlers.Adventures.Quests
 			}
 			Clear();
 			gameArt.DukesTitle();
-			WriteLine("As continue your way down into the Sewers you come across a pile of bones from a creature that" +
+			WriteLine("As you continue your way down into the Sewers you come across a pile of bones from a creature that" +
 			"\n you have never seen before.. As you walk further into the Sewers you see this person just standing there... " +
 			" you Whistle to get attention He Turn's");
 			//Combat Scene.
@@ -84,10 +84,9 @@ namespace DungeonCrawlers.Adventures.Quests
 
 			//Store
 			MainFunctions.Runstore();
-			WriteLine("Testing after running store");
-			ReadKey();
-			//WriteLine("Test After Running Store");
 			//ReadKey();
+
+
 			//TODO list
 			//Rooms
 			

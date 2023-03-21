@@ -1,4 +1,7 @@
 ﻿using DungeonCrawlers.Entities.Character.Service;
+using DungeonCrawlers.Game.Interfaces;
+using DungeonCrawlers.Game.TownSquare;
+using DungeonCrawlers.Utilities.GameUtilites;
 using Pastel;
 using static DungeonCrawlers.Utilities.Functions.MainFunctions;
 using static System.Console;
@@ -7,8 +10,15 @@ namespace CupCakesAdventure
 
 {
 
+	
+
 	public class Store
 	{
+
+		//private static TownSquare MainTownsquare = new TownSquare();
+
+
+
 		
 		public static Player currentPlayer = new Player();
 
@@ -51,7 +61,7 @@ namespace CupCakesAdventure
 				WriteLine();
 
 				//Player Stats Menu
-				WriteLine(p.player + "'s Stats");
+				WriteLine(MainScreen.currentPlayer.player + "'s Stats");
 				WriteLine("========================".Pastel("#125874"));
 				WriteLine("Current Health " + p.health);
 				WriteLine("Player Coin's " + p.coins);
@@ -64,32 +74,34 @@ namespace CupCakesAdventure
 
 
 
-
-
-
-
-
-				//Input Section
-				string input = ReadLine().ToLower();
-				if (input == "p" || input == "potion")
+				switch(ReadLine().ToUpper())
 				{
-					TryBuy("potion", potionP, p);
-				}
-				else if (input == "w" || input == "weapon")
-				{
-					TryBuy("weapon", weaponP, p);
-				}
-				else if (input == "a" || input == "armor")
-				{
-					TryBuy("armor", armorP, p);
-				}
-				else if (input == "d" || input == "difficulty mod")
-				{
-					TryBuy("dif", difP, p);
-				}
-				else if (input == "e" || input == "exit")
-					break;
+					case "P":
+						TryBuy("potion", potionP, p);
 
+
+						break;
+
+					case "W":
+						TryBuy("weapon", weaponP, p);
+						break;
+						
+
+					case "A":
+						TryBuy("armor", armorP, p);
+						break;
+
+					case "D":
+						TryBuy("dif", difP, p);
+
+						break;
+
+					case "E":
+						Clear();
+						Thread.Sleep(1000);
+						TownSquare.MainTownsquare();
+						break;
+				}
 			}
 
 			static void TryBuy(string item, int cost, Player p)

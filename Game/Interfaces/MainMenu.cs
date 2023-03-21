@@ -41,10 +41,12 @@ namespace DungeonCrawlers.Game.Interfaces
 
 					// Load Game
 					case "L":
+						WriteLine("Sorry This Feature Is not Available Yet ");
+						Thread.Sleep(1000);
+						Mainmenu();
 						break;
 					//Credits
 					case "C":
-						Clear();
 						WriteLine("Loading Credit's...");
 						Thread.Sleep(1500);
 						Clear();

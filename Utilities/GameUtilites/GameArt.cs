@@ -63,6 +63,93 @@ namespace DungeonCrawlers.Utilities.GameUtilites
 
 
 
+		public void Townsquare()
+
+		{
+			string? TownSquare = @"
+~         ~~          __
+       _T      .,,.    ~--~ ^^
+ ^^   // \                    ~
+      ][O]    ^^      ,-~ ~
+   /''-I_I         _II____
+__/_  /   \ ______/ ''   /'\_,__
+  | II--'''' \,--:--..,_/,.-{ },
+; '/__\,.--';|   |[] .-.| O{ _ }
+:' |  | []  -|   ''--:.;[,.'\,/
+'  |[]|,.--'' '',   ''-,.    |
+  ..    ..-''    ;       ''. '
+";
+
+
+
+			using (StringReader reader = new StringReader(TownSquare))
+			{
+				string line = string.Empty;
+				do
+				{
+					line = reader.ReadLine();
+					if (line != null)
+					{
+						SetCursorPosition((Console.WindowWidth - line.Length) / 2, Console.CursorTop);
+						WriteLine(line);
+					}
+				} while (line != null);
+			}
+		}
+
+
+
+
+		public void TownSquareTilte()
+		{
+
+
+
+
+
+
+			string? TownSquareTitle = @"
+  _______                   _____                            
+ |__   __|                 / ____|                           
+    | | _____      ___ __ | (___   __ _ _   _  __ _ _ __ ___ 
+    | |/ _ \ \ /\ / / '_ \ \___ \ / _` | | | |/ _` | '__/ _ \
+    | | (_) \ V  V /| | | |____) | (_| | |_| | (_| | | |  __/
+    |_|\___/ \_/\_/ |_| |_|_____/ \__, |\__,_|\__,_|_|  \___|
+                                     | |                     
+                                     |_|                     
+";
+
+
+			using (StringReader reader = new StringReader(TownSquareTitle))
+			{
+				string line = string.Empty;
+				do
+				{
+					line = reader.ReadLine();
+					if (line != null)
+					{
+						SetCursorPosition((Console.WindowWidth - line.Length) / 2, Console.CursorTop);
+						WriteLine(line);
+					}
+				} while (line != null);
+			}
+
+
+
+
+
+		}
+
+		
+
+
+
+
+
+
+
+
+
 
 	}
 }

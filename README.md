@@ -12,19 +12,17 @@
 ## Future Plan's:
 #### -Better User Gui.
 #### -Saving & loading system.(Being implemented)
-#### -Store
+#### -Store (Added)
 #### -Player CLasses
-#### -Combat System
-#### -Town Square
+#### -Combat System (Added)
+#### -Town Square (Added)
 #### -Player Inventory.
 #### -Pet's (Maybe)
 =======
 ## Extra Info about the source code..
 #### So i have OCD you might be able to tell with the folder's lol..
 #### Ever folder & class has a purpose..
-
-
-
+=======
 # ChangeLog:
 ## 2/20/23
 #### -Added Credits Class for links to my YouTube, Discord and, My GitHub.
@@ -36,3 +34,13 @@
 
 ## 2/23/23
 #### -Added Unit Testing 
+
+## 3/20/23
+#### -Added Combat System
+#### -Added Encounter System
+#### -Added Store
+#### -Added Town Square (Still Being Worked on..(Only implemented))
+#### -Added Game Docs Page (Still Being Worked on..(Only implemented))
+
+## Notes:
+#### -Some of the stuff was already in the game in just needed to be implemented better
