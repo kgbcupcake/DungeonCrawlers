@@ -39,8 +39,5 @@
 #### -Added Combat System
 #### -Added Encounter System
 #### -Added Store
-#### -Added Town Square (Still Being Worked on..(Only implemented))
-#### -Added Game Docs Page (Still Being Worked on..(Only implemented))
-
-## Notes:
-#### -Some of the stuff was already in the game in just needed to be implemented better
+#### -Town Square (Still Being Worked on..(Only implemented))
+#### -Game Docs Page (Still Being Worked on..(Only implemented))
