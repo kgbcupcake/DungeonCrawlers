@@ -1,12 +1,12 @@
-﻿using CupCakesAdventure;
-using DungeonCrawlers.Entities.Character.Service;
+﻿using DungeonCrawlers.Entities.Character.Service;
 using DungeonCrawlers.Game.Interfaces;
+using DungeonCrawlers.Game.TownSquare;
 using Pastel;
 using static System.Console;
 
 namespace DungeonCrawlers.Utilities.Functions
 {
-	public class MainFunctions
+    public class MainFunctions
 	{
 		private static QuestMenu Questmenu = new QuestMenu();
 		public static readonly Player currentPlayer = new Player();
@@ -36,12 +36,12 @@ namespace DungeonCrawlers.Utilities.Functions
 			Write("Yes/No?");
 			switch (ReadLine().ToUpper())
 			{
-				case "YES":
+				case "Y":
 					Clear();
 					WriteLine("you're a animal!!! Okay");
 					break;
 
-				case "NO":
+				case "N":
 					Clear();
 					WriteLine("You have successfully taken the torch off of the wall");
 					break;
@@ -62,12 +62,12 @@ namespace DungeonCrawlers.Utilities.Functions
 
 			switch (ReadLine().ToUpper())
 			{
-				case "YES":
+				case "Y":
 					Clear();
 					WriteLine("      You are about to start your first quest will You survive?");
 					break;
 
-				case "NO":
+				case "N":
 					Clear();
 					WriteLine(" Returning back to Quest Menu Plz Wait ");
 					Thread.Sleep(1500);
@@ -127,22 +127,28 @@ namespace DungeonCrawlers.Utilities.Functions
 
 		{
 
-			if (MainScreen.currentPlayer.health > 0)
-			{
-				string? Hr = "Human Rouge";
-				WriteLine($"You Have defeated {Hr} would you like to go to the store and upgrade your gear?");
-				Write("Yes/No:");
-				switch (ReadLine().ToUpper())
-				{
-					case "YES":
-						WriteLine("Loading Store");
-						Store.LoadShop(currentPlayer);
-						break;
-					case "NO":
-						break;
-				}
+			WriteLine("Loading Store");
+			Thread.Sleep(1000);
+			Store.LoadShop(currentPlayer);
 
-			}
+
+
+
+			//if (MainScreen.currentPlayer.health > 0)
+			//{
+			//	WriteLine(" You've won!!! would you like to go to Return to the town square and upgrade your gear?");
+			//	Write("Yes/No:");
+			//	switch (ReadLine().ToUpper())
+			//	{
+			//		case "Y":
+			//			WriteLine("Loading Store");
+			//			Store.LoadShop(currentPlayer);
+			//			break;
+			//		case "N":
+			//			break;
+			//	}
+
+			//}
 
 
 

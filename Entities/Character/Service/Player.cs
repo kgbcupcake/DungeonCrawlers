@@ -12,6 +12,7 @@
 		public int potion = 5;
 		public int weaponVaule = 1;
 		public int mods = 0;
+		public int Inv = 0;
 
 		public class Abilities
 		{

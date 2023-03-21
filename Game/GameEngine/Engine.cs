@@ -1,12 +1,11 @@
-﻿using DungeonCrawlers.Game.Interfaces;
-using static System.Console;
+﻿using static System.Console;
 
 namespace DungeonCrawlers.Game.GameEngine
 {
 	internal class Engine
 	{
-		private static QuestMenu Questmenu = new QuestMenu();
-
+		
+		
 
 		
 		public static void StartGame()
@@ -17,8 +16,17 @@ namespace DungeonCrawlers.Game.GameEngine
 				//GetWarriorClass.LoadWarrior();
 				//LoadDukesQuest.DukesMainQuest();
 
+
 				//CCm.CreationMenu();
-				Questmenu.Questmenu();
+
+
+
+
+				// Town Square
+				TownSquare.TownSquare.MainTownsquare();
+
+				
+				
 
 
 				

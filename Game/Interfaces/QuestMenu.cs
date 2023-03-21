@@ -21,12 +21,13 @@ namespace DungeonCrawlers.Game.Interfaces
 
 
 
-			
+			Clear();
 			ResetColor();
 			WriteLine("Plz Select Which Quest You Would Like To Begin With\n");
 			WriteLine("=================================================================================".Pastel("#125874"));
 			Write("(1)Quest One: Duke's Chalice                 (2)Still Being Work On\n");
 			Write("(3)Still Being Work On                       (4)Still Being Work On\n");
+			WriteLine("                         (5)Return To TownSquare                                        ");
 			WriteLine("=================================================================================".Pastel("#125874"));
 			switch (ReadLine().ToUpper())
 			{
@@ -55,9 +56,32 @@ namespace DungeonCrawlers.Game.Interfaces
 
 				case "2":
 					Clear();
-					WriteLine("Room Is Still Being Work On");
+					WriteLine("Quest Is Still Being Work On");
 					Thread.Sleep(1500);
 					Questmenu();
+					break;
+
+				case "3":
+					Clear();
+					WriteLine("Quest Is Still Being Work On");
+					Thread.Sleep(1500);
+					Questmenu();
+					break;
+
+				case "4":
+					Clear();
+					WriteLine("Quest Is Still Being Work On");
+					Thread.Sleep(1500);
+					Questmenu();
+					break;
+
+				case "5":
+					Clear();
+					WriteLine("Returning To TownSquare  ");
+					Thread.Sleep(1500);
+					Clear();
+					TownSquare.TownSquare.MainTownsquare();
+					
 					break;
 
 				default:

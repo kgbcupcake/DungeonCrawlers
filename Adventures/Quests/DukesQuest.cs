@@ -1,7 +1,6 @@
-﻿using CupCakesAdventure;
+﻿
 using DungeonCrawlers.Adventures.Interfaces;
 using DungeonCrawlers.Entities.Character.Service;
-using DungeonCrawlers.Entities.Encounters;
 using DungeonCrawlers.Game.Interfaces;
 using DungeonCrawlers.Utilities.Functions;
 using DungeonCrawlers.Utilities.GameUtilites;
@@ -53,15 +52,14 @@ namespace DungeonCrawlers.Adventures.Quests
 			Write("Do you take a torch off the wall? Yes/No:");
 			switch (ReadLine().ToUpper())
 			{
-				case "YES":
+				case "Y":
 					Clear();
 					gameArt.DukesTitle();
 					WriteLine(" You have successfully taken the torch off of the wall\n you now have a light source... This light source wont last for ever though.");
 					WriteLine("You will either have to find a new torch or find the materials to relight the torch");
-					//ReadKey();
 					break;
 
-				case "NO":
+				case "N":
 					Clear();
 					MainFunctions.YesNo();
 					ReadKey();
@@ -81,12 +79,7 @@ namespace DungeonCrawlers.Adventures.Quests
 			//Combat Scene.
 			Entities.Encounters.MainEncounter.FirstEncounter();
 
-
-			//Store
-			MainFunctions.Runstore();
-			//ReadKey();
-
-
+			WriteLine("As you Continue your way into the sewers you come across a locked room ");
 			//TODO list
 			//Rooms
 			

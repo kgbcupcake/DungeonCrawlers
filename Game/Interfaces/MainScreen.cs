@@ -36,17 +36,6 @@ namespace DungeonCrawlers.Game.Interfaces
 			WriteLine($"Welcome {currentPlayer.player}\n");
 
 			GameInfoService.MainGameInfo();
-			
-
-
-
-
-
-
-
-
-
-
 			//TODO
 			// Player Classes 
 			//WriteLine("Before we start Plz Choose which Character you would like to play as.");
@@ -65,16 +54,6 @@ namespace DungeonCrawlers.Game.Interfaces
 
 
 			//}
-
-
-
-
-
-
-
-
-
-
 			Write("                       Press Enter TO Enter Dungeon: ".Pastel("#8A39A8"));
 			ConsoleKeyInfo key = ReadKey();
 			Thread.Sleep(500);
