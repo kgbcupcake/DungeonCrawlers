@@ -18,6 +18,8 @@
 #### -Town Square (Added)
 #### -Player Inventory.
 #### -Pet's (Maybe)
+#### -Black Smith
+#### -Med Clinic 
 =======
 ## Extra Info about the source code..
 #### So i have OCD you might be able to tell with the folder's lol..
@@ -41,3 +43,7 @@
 #### -Added Store
 #### -Town Square (Still Being Worked on..(Only implemented))
 #### -Game Docs Page (Still Being Worked on..(Only implemented))
+
+## 3/21/23
+#### -Player Inventory (Still Being Worked on...(Only implemented))
+#### -Moved the Town Square..(So Now it's at the starting page with option's to enter the (store) & (Quest Menu)) 
