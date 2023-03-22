@@ -1,6 +1,7 @@
 ﻿using DungeonCrawlers.Entities.Character.Service;
 using DungeonCrawlers.Entities.Interfaces;
 using DungeonCrawlers.Game.Interfaces;
+using DungeonCrawlers.Game.TownSquare;
 using Pastel;
 using static System.Console;
 
@@ -24,20 +25,18 @@ namespace DungeonCrawlers.Entities.Character.Warrior
 
 		
 
-			WriteLine($"You Have Chosen the  {Warriorc.player} class \n");
+			WriteLine($"You Have Chosen the  {Warriorc.name} class \n");
 			Thread.Sleep(2000);
 			Clear();
-			string? Wc = Warriorc.player.Pastel("#148794");
+			string? Wc = Warriorc.name.Pastel("#148794");
 			WriteLine(Wc + " Stat's".Pastel("#A0276D"));
-			Playerstats();
-			//WriteLine($"Create a name for your {Warriorc.player}");
-			//string? CharacterData = ReadLine().Pastel("#154897");
-			//Thread.Sleep(100);
 			Clear();
-			WriteLine($"Your Character name is {MainScreen.currentPlayer.player} the {Warriorc.player}");
+			Playerstats();
+			WriteLine($"Your Character name is {MainScreen.currentPlayer.player} the {Warriorc.name}");
 			Write(V.Pastel("#8A39A8"));
 			ConsoleKeyInfo key = ReadKey();
-			Clear();
+			TownSquare.MainTownsquare();
+			//Clear();
 		}
 
 		public void Playerstats()

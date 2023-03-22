@@ -31,29 +31,9 @@ namespace DungeonCrawlers.Game.Interfaces
 			Write(string.Format("{0," + WindowWidth / 2 + "}", "Plz Enter Your Name:".Pastel("#97151D")));
 			ForegroundColor = ConsoleColor.Cyan;
 			currentPlayer.player = ReadLine();
-			//string? UserName = ReadLine();
 			Clear();
 			WriteLine($"Welcome {currentPlayer.player}\n");
-
 			GameInfoService.MainGameInfo();
-			//TODO
-			// Player Classes 
-			//WriteLine("Before we start Plz Choose which Character you would like to play as.");
-			//WriteLine("Mage, Knight, Warrior, Archer  ");
-
-
-
-			//switch(ReadLine().ToUpper())
-			//{
-			//	case "W":
-			//		GetWarriorClass.LoadWarrior();
-
-
-			//		break;
-
-
-
-			//}
 			Write("                       Press Enter TO Enter Dungeon: ".Pastel("#8A39A8"));
 			ConsoleKeyInfo key = ReadKey();
 			Thread.Sleep(500);

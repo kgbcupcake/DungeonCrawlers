@@ -1,5 +1,5 @@
-﻿using static System.Console;
-
+﻿
+using static System.Console;
 namespace DungeonCrawlers.Game.GameEngine
 {
 	internal class Engine
@@ -13,25 +13,8 @@ namespace DungeonCrawlers.Game.GameEngine
 
 			try
 			{
-				//GetWarriorClass.LoadWarrior();
-				//LoadDukesQuest.DukesMainQuest();
-
-
-				//CCm.CreationMenu();
-
-
-
-
 				// Town Square
 				TownSquare.TownSquare.MainTownsquare();
-
-				
-				
-
-
-				
-
-
 
 			}
 			catch (Exception)
@@ -41,6 +24,9 @@ namespace DungeonCrawlers.Game.GameEngine
 				WriteLine($"KaBoom Orcs did it again something went wrong!!! {ErrorMsg}");
 				ReadKey();
 			}
+
 		}
+		
+
 	}
 }

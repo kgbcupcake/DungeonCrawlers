@@ -62,21 +62,6 @@ namespace DungeonCrawlers.Game.TownSquare
                 WriteLine();
                 WriteLine();
 
-                //Player Stats Menu
-                WriteLine(MainScreen.currentPlayer.player + "'s Stats");
-                WriteLine("========================".Pastel("#125874"));
-                WriteLine("Current Health " + p.health);
-                WriteLine("Player Coin's " + p.coins);
-                WriteLine("Weapon Strength " + p.weaponVaule);
-                WriteLine("Armor Toughness " + p.armorValue);
-                WriteLine("Potion's " + p.potion);
-                WriteLine("Difficulty Mod's " + p.mods);
-                WriteLine("Lock Pick's" + p.Inv);
-                WriteLine("========================".Pastel("#125874"));
-
-
-
-
                 switch (ReadLine().ToUpper())
                 {
                     case "P":
@@ -111,7 +96,7 @@ namespace DungeonCrawlers.Game.TownSquare
                 }
             }
 
-            static void TryBuy(string item, int cost, Player p)
+			static void TryBuy(string item, int cost, Player p)
             {
                 if (p.coins >= cost)
                 {
@@ -133,10 +118,25 @@ namespace DungeonCrawlers.Game.TownSquare
                     WaitForAnyKeyPress();
                 }
             }
+		}
 
+		public static void PlayerStats()
+		{
+            Clear();
+			WriteLine(MainScreen.currentPlayer.player + "'s Stats");
+			WriteLine("========================".Pastel("#125874"));
+			WriteLine("Current Health " + MainScreen.currentPlayer.health);
+			WriteLine("Player Coin's " + MainScreen.currentPlayer.coins);
+			WriteLine("Weapon Strength " + MainScreen.currentPlayer.weaponVaule);
+			WriteLine("Armor Toughness " + MainScreen.currentPlayer.armorValue);
+			WriteLine("Potion's " + MainScreen.currentPlayer.potion);
+			WriteLine("Difficulty Mod's " + MainScreen.currentPlayer.mods);
+			WriteLine("Lock Pick's" + MainScreen.currentPlayer.Inv);
+			WriteLine("========================".Pastel("#125874"));
+			WaitForAnyKeyPress();
+            Clear();
+            TownSquare.MainTownsquare();
+		}
 
-        }
-
-
-    }
+	}
 }

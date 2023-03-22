@@ -15,11 +15,16 @@
 #### -Store (Added)
 #### -Player CLasses
 #### -Combat System (Added)
-#### -Town Square (Added)
-#### -Player Inventory.
-#### -Pet's (Maybe)
+{
+#### {-Town Square (Added)
+#### 
 #### -Black Smith
 #### -Med Clinic 
+#### }
+}
+#### -Player Inventory.
+#### -Pet's (Maybe)
+
 =======
 ## Extra Info about the source code..
 #### So i have OCD you might be able to tell with the folder's lol..

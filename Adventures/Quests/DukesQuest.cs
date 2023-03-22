@@ -41,10 +41,6 @@ namespace DungeonCrawlers.Adventures.Quests
 			string? dec = "Description:".Pastel("#82282E");
 			WriteLine(q1 + " You Have Chosen ".Pastel("#154871") + loadDukesquest.Title.Pastel("#A02DA3"));
 			WriteLine(dec + loadDukesquest.DescriptionD.Pastel("#154875".ToUpper()));
-			//Write("                       Press Enter TO Enter Continue  : ".Pastel("#8A39A8"));
-			//ConsoleKeyInfo key = ReadKey();
-			//Thread.Sleep(50000);
-			//Clear();
 			WriteLine();
 			Write("Yes/No: ");
 			MainFunctions.YesNoTwo();
@@ -80,6 +76,7 @@ namespace DungeonCrawlers.Adventures.Quests
 			Entities.Encounters.MainEncounter.FirstEncounter();
 
 			WriteLine("As you Continue your way into the sewers you come across a locked room ");
+			ReadKey();
 			//TODO list
 			//Rooms
 			

@@ -8,14 +8,6 @@ namespace DungeonCrawler
 		private static void Main(string[] args)
 		{
 			MainFunctions.ConsoleSize();
-
-			//Login Screen
-			//LoginScreen Login = new LoginScreen();
-			//Login.MainLogin();
-
-			//  ---------------------------------------------------//
-
-			// Main Screen
 			MainScreen screen = new MainScreen();
 			screen.mainScreen();
 		}

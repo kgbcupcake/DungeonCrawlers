@@ -12,6 +12,13 @@ namespace DungeonCrawlers.Game.TownSquare
 		private static GameArt gameArt = new GameArt();
 		public static Player currentPlayer = new  Player ();
 		private static QuestMenu Questmenu = new QuestMenu();
+		private static Store store = new Store ();
+		private static CharacterCreationMenu CCm = new CharacterCreationMenu ();
+
+		
+
+
+
 		public static void MainTownsquare()
 		{
 			
@@ -20,9 +27,11 @@ namespace DungeonCrawlers.Game.TownSquare
 			gameArt.Townsquare();
 
 			WriteLine("		      ==============================================".Pastel("#125874"));
-			WriteLine("			     |(S)tore|  |(Q)uests|	\n                                 ");
+			WriteLine("			        |(S)tore|      |(Q)uests|	\n                                     ");
+			WriteLine("			     |(B)lack Smith|  |(M)ed Clinic|	\n                                 ");
+			WriteLine("			             |(P)layer Stat's|                                             ");
 			WriteLine("		      ==============================================".Pastel("#125874"));
-
+			WriteLine("			             |(C)haracter Creation|                                             ");
 
 			switch(ReadLine().ToUpper())
 			{
@@ -34,6 +43,33 @@ namespace DungeonCrawlers.Game.TownSquare
 					WriteLine("Loading Quest's");
 					Thread.Sleep(1000);
 					Questmenu.Questmenu();
+					break;
+
+				case "P":
+					WriteLine("Loading Player Stat's");
+					Thread.Sleep(1000);
+					Store.PlayerStats();
+					break;
+
+				case "B":
+					Clear();
+					WriteLine("Coming Soon");
+					Thread.Sleep(1000);
+					MainTownsquare();
+					break;
+
+				case "M":
+					Clear();
+					WriteLine("Coming Soon");
+					Thread.Sleep(1000);
+					MainTownsquare();
+					break;
+
+				case "C":
+					Clear();
+					WriteLine("Loading Creation Menu");
+					Thread.Sleep(1000);
+					CCm.CreationMenu();
 					break;
 
 				default:

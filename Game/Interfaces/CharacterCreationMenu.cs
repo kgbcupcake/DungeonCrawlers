@@ -22,23 +22,24 @@ namespace DungeonCrawlers.Game.Interfaces
 
 		public void CreationMenu()
 		{
+			Clear();
 			Player p = new Player();
-			WriteLine("Plz Select The Character you would like to play as.".Pastel("#125974"));
+			//WriteLine("Plz Select The Character you would like to play as.".Pastel("#125974"));
 
 			WriteLine("Please Chose A Character To Begin".Pastel("#127700"));
 			ForegroundColor = ConsoleColor.Blue;
-			WriteLine("             |(K)night|        |(W)izard|                     ");
-			WriteLine("             |(M)onk|			 |()	|					   ");
+			WriteLine("             |(K)night|        |(W)izard|               ");
+			WriteLine("             |(M)onk|								   ");
 			WriteLine("														   ");
 			WriteLine("                                                        ");
 
 			switch (ReadLine().ToUpper())
 			{
-				case "KNIGHT":
+				case "K":
 					Clear();
 					GetWarriorClass.LoadWarrior();
 
-					Clear();
+					
 
 					break;
 

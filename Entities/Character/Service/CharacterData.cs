@@ -7,7 +7,7 @@ namespace DungeonCrawlers.Entities.Character.Service
 		Random rand = new Random();
 		public string? GUID { get; set; }
 	
-		public string? player { get; set; }
+		public string? name { get; set; }
 		public int Level { get; set; }
 		public string? Abilitie { get; set; }
 		public int coins { get; set; }
