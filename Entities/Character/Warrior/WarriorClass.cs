@@ -25,30 +25,27 @@ namespace DungeonCrawlers.Entities.Character.Warrior
 
 		
 
-			WriteLine($"You Have Chosen the  {Warriorc.name} class \n");
+			WriteLine($"You Have Chosen the  {Warriorc.Name} class \n");
 			Thread.Sleep(2000);
 			Clear();
-			string? Wc = Warriorc.name.Pastel("#148794");
+			string? Wc = Warriorc.Name.Pastel("#148794");
 			WriteLine(Wc + " Stat's".Pastel("#A0276D"));
 			Clear();
 			Playerstats();
-			WriteLine($"Your Character name is {MainScreen.currentPlayer.player} the {Warriorc.name}");
+			WriteLine($"Your Character name is {MainScreen.currentPlayer.player} the {Warriorc.Name}");
 			Write(V.Pastel("#8A39A8"));
 			ConsoleKeyInfo key = ReadKey();
 			TownSquare.MainTownsquare();
-			//Clear();
 		}
 
 		public void Playerstats()
 		{
 			var Warriorc = characterService.GetLoadWarriorClass();
-
 			int G = Warriorc.coins;
-			//ForegroundColor = ConsoleColor.DarkMagenta;
 			WriteLine($"Gold: " + Warriorc.coins);
 			ResetColor();
 			WriteLine($"Level: {Warriorc.Level}");
-			WriteLine($"Class:{Warriorc.Class}");
+			//WriteLine($"Class:{Warriorc.Class}");
 			
 		}
 	}

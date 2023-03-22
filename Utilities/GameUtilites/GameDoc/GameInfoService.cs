@@ -42,11 +42,6 @@ namespace DungeonCrawlers.Utilities.GameUtilites.GameDoc
 			WriteLine();
 			WriteLine(C +LoadDocs.Controls.Pastel("#09CBCB"));
 			WriteLine(LoadDocs.YES.Pastel("#158745")+A + LoadDocs.NO.Pastel("#158745"));
-			
-
-
-			
-			//ReadKey();
 		}
 
 

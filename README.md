@@ -13,13 +13,14 @@
 #### -Better User Gui.
 #### -Saving & loading system.(Being implemented)
 #### -Store (Added)
-#### -Player CLasses
+#### -Player CLasses (Being implemented)
 #### -Combat System (Added)
 
-#### -Town Square (Added)
+
 {
-#### -Black Smith (Being implemented)
-#### -Med Clinic (Being implemented)
+#### -Town Square (Added)
+#### -Black Smith
+#### -Med Clinic
 #### 
 }
 #### -Player Inventory.
@@ -52,3 +53,7 @@
 ## 3/21/23
 #### -Player Inventory (Still Being Worked on...(Only implemented))
 #### -Moved the Town Square..(So Now it's at the starting page with option's to enter the (store) & (Quest Menu)) 
+
+## 3/22/23
+#### -Character creation menu..(Still Being Worked on..(Only implemented))
+#### -Cleaned up some code got rid of some stuff that wasn't being used or was for testing Purposes.

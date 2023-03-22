@@ -13,7 +13,8 @@
 		public int weaponVaule = 1;
 		public int mods = 0;
 		public int Inv = 0;
-
+		public enum PlayerClass { Mage, Archer, Warrior }
+		public PlayerClass cuurrentClass = PlayerClass.Warrior;
 		public class Abilities
 		{
 			public int Strength;

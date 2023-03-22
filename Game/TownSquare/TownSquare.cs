@@ -67,7 +67,7 @@ namespace DungeonCrawlers.Game.TownSquare
 
 				case "C":
 					Clear();
-					WriteLine("Loading Creation Menu");
+					WriteLine("Loading CreationMenu");
 					Thread.Sleep(1000);
 					CCm.CreationMenu();
 					break;

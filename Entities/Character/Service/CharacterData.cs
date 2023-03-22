@@ -1,15 +1,13 @@
-﻿using DungeonCrawlers.Items.Interfaces;
-
-namespace DungeonCrawlers.Entities.Character.Service
+﻿namespace DungeonCrawlers.Entities.Character.Service
 {
+		
 	public class CharacterData
 	{
 		Random rand = new Random();
 		public string? GUID { get; set; }
-	
-		public string? name { get; set; }
+		public string? Name { get; set; }
 		public int Level { get; set; }
-		public string? Abilitie { get; set; }
+		public string? Abilities { get; set; }
 		public int coins { get; set; }
 		public int health { get; set; }
 		public int damage { get; set; }
@@ -17,20 +15,11 @@ namespace DungeonCrawlers.Entities.Character.Service
 		public int potion { get; set; }
 		public int weaponVaule { get; set; }
 		public int mods { get; set; }
-		public List<string>? AdventuresPlayed;
-		public List<IItem>? Inventory;
-		public CharacterClass Class;
-		public enum PlayerClass { Mage, Archer, Warrior}
-		public PlayerClass cuurrentClass = PlayerClass.Warrior;
-		public class Abilities
-		{
-			public int Strength;
-			public int Dexterity;
-			public int Intelligence;
-			public int Wisdom;
-			public int Charisma;
-		}
 
+	
+
+
+		public List<string>? AdventuresPlayed;
 
 
 
@@ -63,19 +52,45 @@ namespace DungeonCrawlers.Entities.Character.Service
 
 
 
+
+
+
+		//public string? Background;
+		//public Abilities? Abilities;
+		//public string? Name;
+		//public string? Level;
+		//public int coins;
+		//public int mods;
+		//public int potion;
+		//public int damage;
+		//public bool IsAslive;
+		//public int ArmorClass;
+		//public int armorValue;
+		//public int weaponVaule;
+		//public int HitPoints;
+		//public List<string>? AdventuresPlayed;
+		//public List<IItem>? Inventory;
+
+
+
+
+
 	}
 
+	public class Abilities
+		{
+			public int Strenght;
+			public int Dexerity;
+			public int Wisdom;
+			public int Inelligence;
+			public int Charisma;
 
-	public enum CharacterClass
-	{
-		Fighter,
-		MagicUser,
-		Thief,
-		Healer
+		}
 
-	}
 
-	
+
+
+
 
 
 }

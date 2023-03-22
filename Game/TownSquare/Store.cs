@@ -12,13 +12,8 @@ namespace DungeonCrawlers.Game.TownSquare
 
 	public class Store
     {
-
-        //private static TownSquare MainTownsquare = new TownSquare();
-
-
-
-
-        public static Player currentPlayer = new Player();
+       public static Player currentPlayer = new Player();
+	  
 
         static int armorMod;
         static int weaponMod;
@@ -123,9 +118,10 @@ namespace DungeonCrawlers.Game.TownSquare
 		public static void PlayerStats()
 		{
             Clear();
-			WriteLine(MainScreen.currentPlayer.player + "'s Stats");
+            WriteLine();
+			//WriteLine(MainScreen.currentPlayer.player + "'s Stats");
 			WriteLine("========================".Pastel("#125874"));
-			WriteLine("Current Health " + MainScreen.currentPlayer.health);
+			WriteLine("Current Health " + currentPlayer.health);
 			WriteLine("Player Coin's " + MainScreen.currentPlayer.coins);
 			WriteLine("Weapon Strength " + MainScreen.currentPlayer.weaponVaule);
 			WriteLine("Armor Toughness " + MainScreen.currentPlayer.armorValue);

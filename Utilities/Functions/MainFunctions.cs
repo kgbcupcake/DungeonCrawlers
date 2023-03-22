@@ -6,7 +6,7 @@ using static System.Console;
 
 namespace DungeonCrawlers.Utilities.Functions
 {
-    public class MainFunctions
+	public class MainFunctions
 	{
 		private static QuestMenu Questmenu = new QuestMenu();
 		public static readonly Player currentPlayer = new Player();

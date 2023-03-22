@@ -1,6 +1,7 @@
 ﻿
 using DungeonCrawlers.Adventures.Interfaces;
 using DungeonCrawlers.Entities.Character.Service;
+using DungeonCrawlers.Entities.Interfaces;
 using DungeonCrawlers.Game.Interfaces;
 using DungeonCrawlers.Utilities.Functions;
 using DungeonCrawlers.Utilities.GameUtilites;
@@ -19,6 +20,7 @@ namespace DungeonCrawlers.Adventures.Quests
 		public DukesQuest(IAdventureService AdventureServices)
 		{
 			adventureServices = AdventureServices;
+			
 		}
 
 		
@@ -39,7 +41,9 @@ namespace DungeonCrawlers.Adventures.Quests
 
 			string? q1 = "Quest One:".Pastel("#82282E");
 			string? dec = "Description:".Pastel("#82282E");
+			string? Cl = "CompletionXPReward: ";
 			WriteLine(q1 + " You Have Chosen ".Pastel("#154871") + loadDukesquest.Title.Pastel("#A02DA3"));
+			WriteLine(Cl + loadDukesquest.CompletionXPReward);
 			WriteLine(dec + loadDukesquest.DescriptionD.Pastel("#154875".ToUpper()));
 			WriteLine();
 			Write("Yes/No: ");
