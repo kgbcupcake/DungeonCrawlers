@@ -15,8 +15,9 @@
 #### -Store (Added)
 #### -Player CLasses
 #### -Combat System (Added)
-{
+
 #### -Town Square (Added)
+{
 #### -Black Smith (Being implemented)
 #### -Med Clinic (Being implemented)
 #### 
