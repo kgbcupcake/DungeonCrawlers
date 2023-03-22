@@ -16,11 +16,10 @@
 #### -Player CLasses
 #### -Combat System (Added)
 {
-#### {-Town Square (Added)
+#### -Town Square (Added)
+#### -Black Smith (Being implemented)
+#### -Med Clinic (Being implemented)
 #### 
-#### -Black Smith
-#### -Med Clinic 
-#### }
 }
 #### -Player Inventory.
 #### -Pet's (Maybe)
