@@ -9,7 +9,7 @@ namespace DungeonCrawlers.Entities.Encounters
 	{
 		static readonly Random rand = new Random();
 		public static Player currentPlayer = new Player();
-		//private readonly IAdventureService adventureServices;
+		
 	
 		
 
