@@ -1,9 +1,10 @@
 ﻿namespace DungeonCrawlers.Entities.Character.Service
 {
+	
 	public class Player
 	{
+		
 		Random rand = new Random();
-
 		public string? player;
 		public int coins = 30000;
 		public int health = 10;
@@ -13,25 +14,17 @@
 		public int weaponVaule = 1;
 		public int mods = 0;
 		public int Inv = 0;
-		public enum PlayerClass { Mage, Archer, Warrior }
-		public PlayerClass cuurrentClass = PlayerClass.Warrior;
-		public class Abilities
+		public int Xp;
+		public int HitPoints = 4;
+		public Abilities? Abilities = new Abilities();
+
+		public enum PlayerClass {Mage,Monk,Warrior,Wizard,Knight};
+		public PlayerClass currentClass = PlayerClass.Warrior;
+
+		public Player()
 		{
-			public int Strength;
-			public int Dexterity;
-			public int Intelligence;
-			public int Wisdom;
-			public int Charisma;
+			Abilities =new Abilities();
 		}
-
-		public int GetHealth()
-		{
-			int upper = (2 * mods + 5);
-			int lower = (mods + 2);
-			return rand.Next(lower, upper);
-		}
-
-
 
 		public int GetPower()
 		{
@@ -47,6 +40,40 @@
 			return rand.Next(lower, upper);
 		}
 
+		public int GetHealth()
+		{
+			int upper = (2 * mods + 5);
+			int lower = (mods + 2);
+			return rand.Next(lower, upper);
+		}
+
+
+	
+
 
 	}
+
+
+
+
+
+	public class Abilities
+	{
+		public int Strength;
+		public int Dexterity;
+		public int Intelligence;
+		public int Wisdom;
+		public int Charisma;
+	}
+
+
+
+
+
+
+
+
+
+
+
 }

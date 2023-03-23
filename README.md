@@ -55,5 +55,5 @@
 #### -Moved the Town Square..(So Now it's at the starting page with option's to enter the (store) & (Quest Menu)) 
 
 ## 3/22/23
-#### -Character creation menu..(Still Being Worked on..(Only implemented))
-#### -Cleaned up some code got rid of some stuff that wasn't being used or was for testing Purposes.
+#### -Got rid of some code that wasn't being used or was for testing Purposes.
+#### -Decided not to go with player Class system will be looking into something else to replace this...(Might Add This Down The Road)
