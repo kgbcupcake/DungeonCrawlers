@@ -119,7 +119,7 @@ namespace DungeonCrawlers.Game.TownSquare
 		{
             Clear();
             WriteLine();
-			//WriteLine(MainScreen.currentPlayer.player + "'s Stats");
+			WriteLine(MainScreen.currentPlayer.player + "'s Stats");
 			WriteLine("========================".Pastel("#125874"));
 			WriteLine("Current Health " + currentPlayer.health);
 			WriteLine("Player Coin's " + MainScreen.currentPlayer.coins);

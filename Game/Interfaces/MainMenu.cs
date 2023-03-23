@@ -11,8 +11,6 @@ namespace DungeonCrawlers.Game.Interfaces
 	internal class MainMenu
 	{
 		private static AdventureService adventureService = new AdventureService();
-		private static CharacterService characterService = new CharacterService();
-		//private static Engine gameEngine = new Engine(adventureService,characterService);
 
 		public static void Mainmenu()
 		{

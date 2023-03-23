@@ -13,7 +13,6 @@ namespace DungeonCrawlers.Game.TownSquare
 		public static Player currentPlayer = new  Player ();
 		private static QuestMenu Questmenu = new QuestMenu();
 		private static Store store = new Store ();
-		private static CharacterCreationMenu CCm = new CharacterCreationMenu ();
 
 		
 
@@ -31,7 +30,6 @@ namespace DungeonCrawlers.Game.TownSquare
 			WriteLine("			     |(B)lack Smith|  |(M)ed Clinic|	\n                                 ");
 			WriteLine("			             |(P)layer Stat's|                                             ");
 			WriteLine("		      ==============================================".Pastel("#125874"));
-			WriteLine("			             |(C)haracter Creation|                                             ");
 
 			switch(ReadLine().ToUpper())
 			{
@@ -63,13 +61,6 @@ namespace DungeonCrawlers.Game.TownSquare
 					WriteLine("Coming Soon");
 					Thread.Sleep(1000);
 					MainTownsquare();
-					break;
-
-				case "C":
-					Clear();
-					WriteLine("Loading CreationMenu");
-					Thread.Sleep(1000);
-					CCm.CreationMenu();
 					break;
 
 				default:
