@@ -1,18 +1,14 @@
-﻿
-using static System.Console;
+﻿using static System.Console;
 namespace DungeonCrawlers.Game.GameEngine
 {
 	internal class Engine
 	{
-		
-		
-
-		
 		public static void StartGame()
 		{
-
 			try
 			{
+				
+
 				// Town Square
 				TownSquare.TownSquare.MainTownsquare();
 
