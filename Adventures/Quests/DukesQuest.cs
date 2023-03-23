@@ -1,7 +1,6 @@
 ﻿
 using DungeonCrawlers.Adventures.Interfaces;
 using DungeonCrawlers.Entities.Character.Service;
-using DungeonCrawlers.Entities.Interfaces;
 using DungeonCrawlers.Game.Interfaces;
 using DungeonCrawlers.Utilities.Functions;
 using DungeonCrawlers.Utilities.GameUtilites;
@@ -15,7 +14,6 @@ namespace DungeonCrawlers.Adventures.Quests
 		private  IAdventureService adventureServices;
 		private static GameArt gameArt = new GameArt();
 		private static QuestMenu Questmenu = new QuestMenu();
-		private static CharacterService characterService = new CharacterService();
 		public static readonly Player currentPlayer = new Player();
 		public DukesQuest(IAdventureService AdventureServices)
 		{

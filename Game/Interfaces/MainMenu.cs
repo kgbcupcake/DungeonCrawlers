@@ -1,5 +1,4 @@
 ﻿using DungeonCrawlers.Adventures.Services;
-using DungeonCrawlers.Entities.Character.Service;
 using DungeonCrawlers.Game.GameEngine;
 using DungeonCrawlers.Utilities.GameUtilites;
 using DungeonCrawlers.Utilities.GameUtilites.Credits;
@@ -11,7 +10,6 @@ namespace DungeonCrawlers.Game.Interfaces
 	internal class MainMenu
 	{
 		private static AdventureService adventureService = new AdventureService();
-		private static CharacterService characterService = new CharacterService();
 		//private static Engine gameEngine = new Engine(adventureService,characterService);
 
 		public static void Mainmenu()
