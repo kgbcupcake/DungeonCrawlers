@@ -13,7 +13,6 @@ namespace DungeonCrawlers.Game.TownSquare
 		public static Player currentPlayer = new  Player ();
 		private static QuestMenu Questmenu = new QuestMenu();
 		private static Store store = new Store ();
-
 		
 
 
@@ -21,7 +20,7 @@ namespace DungeonCrawlers.Game.TownSquare
 		public static void MainTownsquare()
 		{
 			
-			WriteLine($"Welcome to the Town Square {MainScreen.currentPlayer.player}\n There's a store to upgrade your gear");
+			WriteLine($"Welcome to the Town Square {MainScreen.currentPlayer.Name}\n There's a store to upgrade your gear");
 			MainFunctions.LineBreak();
 			gameArt.Townsquare();
 
@@ -62,6 +61,7 @@ namespace DungeonCrawlers.Game.TownSquare
 					Thread.Sleep(1000);
 					MainTownsquare();
 					break;
+
 
 				default:
 					Clear();

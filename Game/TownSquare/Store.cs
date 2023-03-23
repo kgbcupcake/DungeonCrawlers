@@ -13,8 +13,6 @@ namespace DungeonCrawlers.Game.TownSquare
 	public class Store
     {
        public static Player currentPlayer = new Player();
-	  
-
         static int armorMod;
         static int weaponMod;
         static int difMod;
@@ -122,12 +120,12 @@ namespace DungeonCrawlers.Game.TownSquare
 			WriteLine(MainScreen.currentPlayer.player + "'s Stats");
 			WriteLine("========================".Pastel("#125874"));
 			WriteLine("Current Health " + currentPlayer.health);
-			WriteLine("Player Coin's " + MainScreen.currentPlayer.coins);
-			WriteLine("Weapon Strength " + MainScreen.currentPlayer.weaponVaule);
-			WriteLine("Armor Toughness " + MainScreen.currentPlayer.armorValue);
-			WriteLine("Potion's " + MainScreen.currentPlayer.potion);
-			WriteLine("Difficulty Mod's " + MainScreen.currentPlayer.mods);
-			WriteLine("Lock Pick's" + MainScreen.currentPlayer.Inv);
+			WriteLine("Player Coin's " + currentPlayer.coins);
+			WriteLine("Weapon Strength " + currentPlayer.weaponVaule);
+			WriteLine("Armor Toughness " + currentPlayer.armorValue);
+			WriteLine("Potion's " + currentPlayer.potion);
+			WriteLine("Difficulty Mod's " + currentPlayer.mods);
+			WriteLine("Lock Pick's" + currentPlayer.Inv);
 			WriteLine("========================".Pastel("#125874"));
 			WaitForAnyKeyPress();
             Clear();

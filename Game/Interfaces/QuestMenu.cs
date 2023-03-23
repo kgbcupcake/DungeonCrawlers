@@ -31,25 +31,7 @@ namespace DungeonCrawlers.Game.Interfaces
 			{
 				case "1":
 					Clear();
-					
 					LoadDukesQuest.DukesMainQuest();
-					//CCm.CreationMenu();
-
-					//adventureData ??= adventureService.GetLoadDukesquest();
-
-					//var charactersInRange = characterService.GetCharactersInRange(adventureData.MinimumLevel, adventureData.MaxLevel);
-
-					//if (charactersInRange.Count == 0)
-					//{
-					//	WriteLine("Sorry you don't have Characters In Range For This Quest");
-					//	WriteLine("");
-					//	ReadKey();
-					//}
-					//if(charactersInRange.Count >= 1)
-					//{
-					//	LoadDukesQuest.DukesMainQuest();
-					//}
-					
 					break;
 
 				case "2":

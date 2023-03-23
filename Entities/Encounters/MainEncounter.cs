@@ -83,7 +83,7 @@ namespace DungeonCrawlers.Entities.Encounters
 				{
 					//Defend
 					WriteLine("As the  " + n + " prepares to string, you ready your sword in defensive stance");
-					int damage = (p / 4) - MainScreen.currentPlayer.armorValue;
+					int damage = (p / 4) - MainScreen	.currentPlayer.armorValue;
 					if (damage < 0)
 						damage = 0;
 					int attack = rand.Next(1, MainScreen.currentPlayer.weaponVaule) / 2;
@@ -131,7 +131,7 @@ namespace DungeonCrawlers.Entities.Encounters
 				}
 			}
 
-			int c =		MainScreen.currentPlayer.GetCoins();
+			int c =	MainScreen.currentPlayer.GetCoins();
 			Clear();
 			WriteLine("As you stand victorious over the ".Pastel("#712D02") + n + ", its body dissolves into ".Pastel("#0BCECE"));
 			MainScreen.currentPlayer.coins += c;

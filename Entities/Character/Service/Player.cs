@@ -17,9 +17,7 @@
 		public int Xp;
 		public int HitPoints = 4;
 		public Abilities? Abilities = new Abilities();
-
-		public enum PlayerClass {Mage,Monk,Warrior,Wizard,Knight};
-		public PlayerClass currentClass = PlayerClass.Warrior;
+		
 
 		public Player()
 		{
@@ -52,11 +50,6 @@
 
 
 	}
-
-
-
-
-
 	public class Abilities
 	{
 		public int Strength;
@@ -65,15 +58,6 @@
 		public int Wisdom;
 		public int Charisma;
 	}
-
-
-
-
-
-
-
-
-
 
 
 }
