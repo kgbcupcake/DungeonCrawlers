@@ -13,7 +13,7 @@
 #### -Better User Gui.
 #### -Saving & loading system.(Being implemented)
 #### -Store (Added)
-#### -Player CLasses (Being implemented)
+#### -Player CLasses (Being Looked into)
 #### -Combat System (Added)
 
 
@@ -57,3 +57,6 @@
 ## 3/22/23
 #### -Got rid of some code that wasn't being used or was for testing Purposes.
 #### -Decided not to go with player Class system will be looking into something else to replace this...(Might Add This Down The Road)
+
+## 5/08/23
+#### -Added Wix V3 (Installer)

@@ -59,13 +59,5 @@ namespace DungeonCrawlers.Game.Interfaces
 				}
 			}
 		}
-
-		private static void LoadGame()
-		{
-		}
-
-		private static void SaveGame()
-		{
-		}
 	}
 }

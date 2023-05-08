@@ -31,7 +31,9 @@ namespace DungeonCrawlers.Game.Interfaces
 			{
 				case "1":
 					Clear();
+			
 					LoadDukesQuest.DukesMainQuest();
+
 					break;
 
 				case "2":

@@ -4,8 +4,8 @@ using Pastel;
 using static DungeonCrawlers.Utilities.Functions.MainFunctions;
 using static System.Console;
 
-namespace DungeonCrawlers.Game.TownSquare
 
+  namespace DungeonCrawlers.Game.TownSquare
 {
 
 
@@ -20,13 +20,13 @@ namespace DungeonCrawlers.Game.TownSquare
 
         public static void LoadShop(Player p)
         {
-            armorMod = p.armorValue;
-            weaponMod = p.weaponVaule;
-            difMod = p.mods;
-            Lockpick = p.Inv;
-            RunShop(p);
+            armorMod = MainScreen.currentPlayer.armorValue;
+            weaponMod = MainScreen.currentPlayer.weaponVaule;
+            difMod = MainScreen.currentPlayer.mods;
+            Lockpick = MainScreen.currentPlayer.Inv;
+            RunShop(MainScreen.currentPlayer);
         }
-
+        
         public static void RunShop(Player p)
         {
             int potionP;
@@ -37,11 +37,15 @@ namespace DungeonCrawlers.Game.TownSquare
             while (true)
             {
                 //Shop Menu
-                potionP = 20 + 10 * p.mods;
-                armorP = 100 * (p.armorValue + 1);
-                weaponP = 100 * p.weaponVaule;
-                difP = 300 + 100 * p.mods;
-                Lockpickp = 50 + 10 * p.Inv;
+                potionP = 20 + 10 * MainScreen.currentPlayer.potion;
+                armorP = 100 * (MainScreen.currentPlayer.armorValue + 1);
+                weaponP = 100 * MainScreen.currentPlayer.weaponVaule;
+                difP = 300 + 100 * MainScreen.currentPlayer.mods;
+                Lockpickp = 50 + 10 * MainScreen.currentPlayer.Inv;
+				
+
+
+
                 Clear();
                 WriteLine("         ===Shop===           ");
                 WriteLine("========================".Pastel("#125874"));
@@ -55,7 +59,20 @@ namespace DungeonCrawlers.Game.TownSquare
                 WriteLine();
                 WriteLine();
 
-                switch (ReadLine().ToUpper())
+				WriteLine(MainScreen.currentPlayer.player + "'s Stats");
+				WriteLine("========================".Pastel("#125874"));
+				WriteLine("Current Health " + MainScreen.currentPlayer.health);
+				WriteLine("Player Coin's " + MainScreen.currentPlayer.coins);
+				WriteLine("Weapon Strength " + MainScreen.currentPlayer.weaponVaule);
+				WriteLine("Armor Toughness " + MainScreen.currentPlayer.armorValue);
+				WriteLine("Potion's " + MainScreen.currentPlayer.potion);
+				WriteLine("Difficulty Mod's " + MainScreen.currentPlayer.mods);
+				WriteLine("Lock Pick's" + MainScreen.currentPlayer.Inv);
+				WriteLine("========================".Pastel("#125874"));
+
+
+
+				switch (ReadLine().ToUpper())
                 {
                     case "P":
                         TryBuy("potion", potionP, p);
@@ -81,7 +98,7 @@ namespace DungeonCrawlers.Game.TownSquare
                         TryBuy("Lockpick", Lockpickp, p);
                         break;
 
-                    case "E":
+					case "E":
                         Clear();
                         Thread.Sleep(1000);
                         TownSquare.MainTownsquare();
@@ -94,16 +111,16 @@ namespace DungeonCrawlers.Game.TownSquare
                 if (p.coins >= cost)
                 {
                      if (item == "potion")
-                        p.potion++;
+                       MainScreen.currentPlayer.potion++;
                     else if (item == "weapon")
-                        p.weaponVaule++;
+                         MainScreen.currentPlayer.weaponVaule++;
                     else if (item == "armor")
-                        p.armorValue++;
+                        MainScreen.currentPlayer.armorValue++;
                     else if (item == "dif")
-                        p.mods++;
+                        MainScreen.currentPlayer.mods++;
                     else if (item == "Lockpick")
-                        p.Inv++;
-					p.coins -= cost;
+                        MainScreen.currentPlayer.Inv++;
+					MainScreen.currentPlayer.coins -= cost;
                 }
                 else
                 {
@@ -119,14 +136,15 @@ namespace DungeonCrawlers.Game.TownSquare
             WriteLine();
 			WriteLine(MainScreen.currentPlayer.player + "'s Stats");
 			WriteLine("========================".Pastel("#125874"));
-			WriteLine("Current Health " + currentPlayer.health);
-			WriteLine("Player Coin's " + currentPlayer.coins);
-			WriteLine("Weapon Strength " + currentPlayer.weaponVaule);
-			WriteLine("Armor Toughness " + currentPlayer.armorValue);
-			WriteLine("Potion's " + currentPlayer.potion);
-			WriteLine("Difficulty Mod's " + currentPlayer.mods);
-			WriteLine("Lock Pick's" + currentPlayer.Inv);
+			WriteLine("Current Health " + MainScreen.currentPlayer.health);
+			WriteLine("Player Coin's " + MainScreen.currentPlayer.coins);
+			WriteLine("Weapon Strength " + MainScreen.currentPlayer.weaponVaule);
+			WriteLine("Armor Toughness " + MainScreen.currentPlayer.armorValue);
+			WriteLine("Potion's " + MainScreen.currentPlayer.potion);
+			WriteLine("Difficulty Mod's " + MainScreen.currentPlayer.mods);
+			WriteLine("Lock Pick's" + MainScreen.currentPlayer.Inv);
 			WriteLine("========================".Pastel("#125874"));
+
 			WaitForAnyKeyPress();
             Clear();
             TownSquare.MainTownsquare();

@@ -10,8 +10,6 @@ namespace DungeonCrawlers.Entities.Encounters
 		static readonly Random rand = new Random();
 		public static Player currentPlayer = new Player();
 		
-	
-		
 
 		public static void FirstEncounter()
 		{
@@ -23,6 +21,51 @@ namespace DungeonCrawlers.Entities.Encounters
 
 
 		}
+
+
+		public static void BasicFightEncounter()
+		{
+			WriteLine("Raider: You Think You Can Defeat me?");
+			WaitForAnyKeyPress();
+			Combat(true, "", 0, 0);
+		}
+
+
+
+		public static void RandomEncounter()
+		{
+			switch (rand.Next(0, 5))
+			{
+				case 0:
+					BasicFightEncounter();
+					break;
+				case 1:
+					//CumstomEncounters.WizardEncounter.Wizardencounter();
+					break;
+				case 2:
+					//GetZombie();
+					break;
+				//bosses 
+				case 3:
+					//Wizardboss();
+					break;
+				case 4:
+					//RatBoss();
+					break;
+				case 5:
+					break;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
 
 		public static void Combat(bool random, string name, int power, int health)
 		{
@@ -36,7 +79,7 @@ namespace DungeonCrawlers.Entities.Encounters
 			if (random)
 			{
 
-				//w = GetWizard();
+				//w = CumstomEncounters.WizardEncounter.GetWizard();
 				n = GetName();
 				//z = GetZombie();
 				p = MainScreen.currentPlayer.GetPower();
@@ -62,7 +105,7 @@ namespace DungeonCrawlers.Entities.Encounters
 				WriteLine("| (A)ttack (D)enfend |");
 				WriteLine("      |(H)eal|");
 				WriteLine("====================".Pastel("#125874"));
-				WriteLine(" Potions: " + MainScreen.currentPlayer.potion + "  Health: " + MainScreen.currentPlayer.health);
+				WriteLine(" Potions: " + MainScreen.currentPlayer.potion + "  Health: " + MainScreen.currentPlayer.health + "Attack Power" + MainScreen.currentPlayer.weaponVaule);
 				string? input = ReadLine();
 				Clear();
 				if (input.ToLower() == "a" || input.ToLower() == "attack")

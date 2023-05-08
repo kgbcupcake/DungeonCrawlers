@@ -1,6 +1,7 @@
 ﻿
 using DungeonCrawlers.Adventures.Interfaces;
 using DungeonCrawlers.Entities.Character.Service;
+using DungeonCrawlers.Entities.Encounters;
 using DungeonCrawlers.Game.Interfaces;
 using DungeonCrawlers.Utilities.Functions;
 using DungeonCrawlers.Utilities.GameUtilites;
@@ -15,6 +16,8 @@ namespace DungeonCrawlers.Adventures.Quests
 		private static GameArt gameArt = new GameArt();
 		private static QuestMenu Questmenu = new QuestMenu();
 		public static readonly Player currentPlayer = new Player();
+		private static Entities.Encounters.CumstomEncounters.Bosses Bf = new Entities.Encounters.CumstomEncounters.Bosses();
+
 		public DukesQuest(IAdventureService AdventureServices)
 		{
 			adventureServices = AdventureServices;
@@ -35,8 +38,6 @@ namespace DungeonCrawlers.Adventures.Quests
 		public  void DukesMainQuest()
 		{
 			var loadDukesquest = adventureServices.GetLoadDukesquest();	
-			//var Warriorc = characterService.GetLoadWarriorClass();
-
 			string? q1 = "Quest One:".Pastel("#82282E");
 			string? dec = "Description:".Pastel("#82282E");
 			string? Cl = "CompletionXPReward: ";
@@ -75,10 +76,26 @@ namespace DungeonCrawlers.Adventures.Quests
 			"\n you have never seen before.. As you walk further into the Sewers you see this person just standing there... " +
 			" you Whistle to get attention He Turn's");
 			//Combat Scene.
-			Entities.Encounters.MainEncounter.FirstEncounter();
+			MainEncounter.FirstEncounter();
 
-			WriteLine("As you Continue your way into the sewers you come across a locked room ");
+			WriteLine("As you Continue your way into the sewers you come across another Raider");
+			//Combat Scene.
+
+			Bf.Wizardboss();
+			WriteLine("Test After Fight Scene");
 			ReadKey();
+			//Boss Fight
+			if(MainScreen.currentPlayer.weaponVaule > 5)
+			{
+
+				Bf.RatBoss();
+
+			}
+			//else if (MainScreen.currentPlayer.health< 35 || MainScreen.currentPlayer.armorValue == 5)
+			//{
+			//	Bf.RatBoss();
+			//}
+			//ReadKey();
 			//TODO list
 			//Rooms
 			

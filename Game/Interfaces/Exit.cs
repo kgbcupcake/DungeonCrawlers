@@ -1,5 +1,7 @@
 ﻿using Pastel;
 using static System.Console;
+using static DungeonCrawlers.Utilities.Functions.MainFunctions;
+
 namespace DungeonCrawlers.Game.Interfaces
 {
 	class Exit
@@ -17,8 +19,8 @@ namespace DungeonCrawlers.Game.Interfaces
 			WriteLine();
 			WriteLine();
 			WriteLine(exitMsg.Pastel("#023541"));
-			WriteLine("Press Any Key To Exit".Pastel("#E40049"));
-			System.Threading.Thread.Sleep(2500);
+			//WriteLine("Press Any Key To Exit".Pastel("#E40049"));
+			WaitForAnyKeyPress();
 			System.Environment.Exit(0);
 
 		}

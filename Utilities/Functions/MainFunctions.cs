@@ -10,6 +10,9 @@ namespace DungeonCrawlers.Utilities.Functions
 	{
 		private static QuestMenu Questmenu = new QuestMenu();
 		public static readonly Player currentPlayer = new Player();
+		/// <summary>
+		/// Press Key any To Continue
+		/// </summary>
 		public static void WaitForAnyKeyPress()
 		{
 			Write("\nPress any key to continue....".Pastel("#210487"));

@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <Folder Include="Entities\Character\Warrior\" />
-    <Folder Include="Entities\Encounters\CumstomEncounters\" />
     <Folder Include="Entities\Interfaces\" />
     <Folder Include="Entities\Monsters\" />
   </ItemGroup>

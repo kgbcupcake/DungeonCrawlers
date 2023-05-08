@@ -20,7 +20,7 @@ namespace DungeonCrawlers.Game.TownSquare
 		public static void MainTownsquare()
 		{
 			
-			WriteLine($"Welcome to the Town Square {MainScreen.currentPlayer.Name}\n There's a store to upgrade your gear");
+			WriteLine($"Welcome to the Town Square {MainScreen.currentPlayer.player}\n There's a store to upgrade your gear");
 			MainFunctions.LineBreak();
 			gameArt.Townsquare();
 
